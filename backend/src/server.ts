@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import {patientRouter} from "../routes/patientRoutes";
 
-const url = "mongodb+srv://tanmay3717:56QU2Bef8cl0unbE@cluster0.9ka8b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const url = "";
 
 const app = express();
 app.use(express.json()); // Middleware to parse JSON
