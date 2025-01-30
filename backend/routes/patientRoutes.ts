@@ -22,4 +22,14 @@ patientRouter.post('/', async (req: Request<{}, {}, IPatient>, res: Response) =>
     }
 });
 
+// Get all patients
+patientRouter.get('/', async (req, res) => {
+    try {
+        const allPatients = await Patient.find();
+        res.status(200).json(allPatients);
+    } catch (error: any) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
 export { patientRouter as patientRouter };
