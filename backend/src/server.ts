@@ -1,8 +1,9 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import {patientRouter} from "../routes/patientRoutes";
+require('dotenv').config({ path: './.env.local' });
 
-const url = "";
+const url = process.env.MONGODB_URL || "";
 
 const app = express();
 app.use(express.json()); // Middleware to parse JSON
