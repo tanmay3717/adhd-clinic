@@ -87,3 +87,13 @@ button:hover {
         height: 120px;
     }
 }
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+input:invalid {
+    border-color: red;
+}

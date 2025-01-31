@@ -4,8 +4,24 @@ import {IPatient, Patient} from "../models/Patient";
 const patientRouter = express.Router();
 
 // Create new patient
-patientRouter.post('/', async (req: Request<{}, {}, IPatient>, res: Response) => {
+patientRouter.post('/', async (req: Request<{}, {}, IPatient>, res: any) => {
     const { fullName, dateOfBirth, contact, diagnosisStatus, notes } = req.body;
+
+    if (!fullName) {
+        return res.status(400).json({ message: 'Full name must be provided' });
+    }
+    if (!dateOfBirth) {
+        return res.status(400).json({ message: 'Date of birth must be provided' });
+    }
+    if (!contact.email) {
+        return res.status(400).json({ message: 'Email must be provided' });
+    }
+    if (!contact.phone) {
+        return res.status(400).json({ message: 'Phone number must be provided' });
+    }
+    if (!diagnosisStatus) {
+        return res.status(400).json({ message: 'Diagnosis status must be provided' });
+    }
 
     try {
         const newPatient = new Patient({

@@ -8,4 +8,9 @@ export const strings = {
     update: "Update",
     create: "Create",
     create_new_patient: "Create a new patient",
+    enter_valid_email: "Enter valid email",
+    enter_email: "Enter email",
+    enter_name: "Enter full name",
+    enter_date_of_birth: "Enter date of birth",
+    enter_phone: "Enter phone",
 }
