@@ -7,7 +7,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <PatientsTable />
-  </React.StrictMode>
+    <React.StrictMode>
+        <PatientsTable/>
+    </React.StrictMode>
 );
