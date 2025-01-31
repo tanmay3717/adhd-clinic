@@ -1,6 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import {patientRouter} from "../routes/patientRoutes";
+import {patientRouter} from "./routes/patientRoutes";
 require('dotenv').config({ path: './.env.local' });
 
 const url = process.env.MONGODB_URL || "";
